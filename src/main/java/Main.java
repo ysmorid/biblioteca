@@ -1,14 +1,18 @@
 import com.javafx.tools.doclets.formats.html.SourceToHTMLConverter;
 
 import java.util.List;
+import java.util.ArrayList;
 
-/**
- * Created by ltran on 1/11/17.
- */
 public class Main {
 
     public static void main(String[] args){
+        List<String> bookTitles = new ArrayList<String>();
+        bookTitles.add("Harry Potter and the Order of the Phoenix");
+        bookTitles.add("The Magicians");
+        bookTitles.add("Buddhism Without Beliefs");
+
         System.out.println(greeting());
+        System.out.println("Books:\n" + printList(bookTitles));
     }
 
     public static String greeting(){
@@ -23,4 +27,5 @@ public class Main {
         }
         return bookTitles;
     }
+
 }
