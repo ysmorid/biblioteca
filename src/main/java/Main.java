@@ -6,10 +6,12 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args){
-        Library library = new Library();
-
         System.out.println(greeting());
+
+        Library library = new Library();
         System.out.println("Books:\n" + library.printList());
+
+        library.displayBookInformation(System.out);
     }
 
     public static String greeting(){
