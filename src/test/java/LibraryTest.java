@@ -21,13 +21,11 @@ public class LibraryTest {
     @Test
     public void shouldShowBookInformation() {
         Library library = new Library();
+        Book book = mock(Book.class);
 
-        PrintStream printStream = mock(PrintStream.class);
+        library.displayBookInformation(book);
 
-        library.displayBookInformation(printStream);
-
-        verify(printStream).println("J.K. Rowling | Harry Potter and the Order of the Phoenix | 2003");
-
+        verify(book).displayDetails();
     }
 
 
